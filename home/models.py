@@ -13,3 +13,10 @@ class product(models.Model):
 
     def __str__(self):
         return self.product_name
+    
+
+    #location
+    #count
+    #seller validity
+    #seller id
+    

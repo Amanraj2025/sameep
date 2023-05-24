@@ -5,14 +5,13 @@ from math import ceil
 
 # Create your views here.
 def index(request):
-    #return HttpResponse('This is home page')
     products = product.objects.all()
     print(products)
     n = len(products)
     nSlides = n//4 + ceil(n/4 - n//4 )
     params = {'num_slides': nSlides,'range': range(1, nSlides), 'product': products}
    
-    return render(request, 'index2.html', params)
+    return render(request, 'index.html', params)
 
 def contact(request):
     return render(request, 'contact.html')
